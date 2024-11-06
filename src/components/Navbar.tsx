@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-2">
             <Palette className="h-7 w-7 text-rose-600" />
-            <span className="font-semibold text-2xl text-gray-900">Artiproche</span>
+            <span className="font-semibold text-2xl text-gray-900">Art'eliers</span>
           </Link>
           <div className="flex space-x-6">
             <Link to="/" className="text-gray-700 hover:text-rose-600 px-3 py-2 font-medium">

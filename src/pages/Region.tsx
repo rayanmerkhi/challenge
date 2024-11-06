@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom';
 import { Calendar, Clock, MapPin, Star, Euro, User } from 'lucide-react';
 import { regions, activities } from '../data/regions';
 import BookingModal from '../components/BookingModal';
+import Payment from '../components/Payment';
 
 export default function Region() {
   const { id } = useParams();
   const [selectedActivity, setSelectedActivity] = useState<number | null>(null);
+  const [payment, setPayement] = useState<number | null>(null);
   const region = regions.find(r => r.id === id);
 
   if (!region) return <div>Région non trouvée</div>;
@@ -88,7 +90,13 @@ export default function Region() {
       {selectedActivity && (
         <BookingModal
           activityId={selectedActivity}
-          onClose={() => setSelectedActivity(null)}
+          onClose={(price) => {setSelectedActivity(null);setPayement(price)}}
+        />
+      )}
+      {payment && (
+        <Payment
+          price={payment}
+          onClose={() => {setPayement(null)}}
         />
       )}
     </div>

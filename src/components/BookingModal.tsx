@@ -5,7 +5,7 @@ import { activities } from '../data/regions';
 
 interface BookingModalProps {
   activityId: number;
-  onClose: () => void;
+  onClose: (price:number|null) => void;
 }
 
 export default function BookingModal({ activityId, onClose }: BookingModalProps) {
@@ -22,7 +22,7 @@ export default function BookingModal({ activityId, onClose }: BookingModalProps)
       date: selectedDate,
       participants
     });
-    onClose();
+    onClose(parseInt(activity.price) * participants);
   };
 
   return (
@@ -30,7 +30,7 @@ export default function BookingModal({ activityId, onClose }: BookingModalProps)
       <div className="bg-white rounded-lg max-w-xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="p-4 border-b flex justify-between items-center">
           <h2 className="text-xl font-semibold">Réserver votre expérience</h2>
-          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
+          <button onClick={()=>onClose(null)} className="p-2 hover:bg-gray-100 rounded-full">
             <X className="w-5 h-5" />
           </button>
         </div>

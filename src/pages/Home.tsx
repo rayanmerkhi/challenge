@@ -23,6 +23,7 @@ export default function Home() {
       description: 'Vivez des moments inoubliables et apprenez des savoir-faire traditionnels'
     }
   ];
+  console.log(id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -33,9 +34,9 @@ export default function Home() {
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Découvrez et réservez des expériences uniques avec les artisans de votre région
         </p>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        {id !== undefined && <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Bonjour à vous {id}
-        </p>
+        </p>}
       </div>
       
       <div className="bg-white rounded-3xl shadow-sm p-8 mb-16">
