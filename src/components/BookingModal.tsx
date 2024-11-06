@@ -17,7 +17,6 @@ export default function BookingModal({ activityId, onClose }: BookingModalProps)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would handle the booking submission
     console.log('Booking submitted:', {
       activityId,
       date: selectedDate,

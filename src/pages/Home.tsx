@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
 import { Palette, Users, Sparkles } from 'lucide-react';
 import FranceMap from '../components/FranceMap';
 
 export default function Home() {
   const navigate = useNavigate();
-
+  const { id } = useParams();
   const features = [
     {
       icon: <Palette className="h-6 w-6 text-rose-600" />,
@@ -32,6 +32,9 @@ export default function Home() {
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Découvrez et réservez des expériences uniques avec les artisans de votre région
+        </p>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Bonjour à vous {id}
         </p>
       </div>
       

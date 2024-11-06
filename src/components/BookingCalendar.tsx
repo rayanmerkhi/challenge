@@ -26,7 +26,8 @@ export default function BookingCalendar({ activityId, onDateSelect }: BookingCal
     return days;
   };
 
-  const handleDateSelect = (date: Date) => {
+  const handleDateSelect = (e: React.FormEvent,date: Date) => {
+    e.preventDefault();
     setSelectedDate(date);
     onDateSelect(date);
   };
@@ -69,7 +70,7 @@ export default function BookingCalendar({ activityId, onDateSelect }: BookingCal
           <div key={index} className="aspect-square">
             {day && (
               <button
-                onClick={() => handleDateSelect(day)}
+                onClick={(e) => handleDateSelect(e,day)}
                 className={`w-full h-full flex items-center justify-center rounded-full text-sm
                   ${selectedDate?.toDateString() === day.toDateString()
                     ? 'bg-rose-600 text-white'

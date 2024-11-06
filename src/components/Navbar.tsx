@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Palette } from 'lucide-react';
+import { Palette,LogIn } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -17,6 +17,9 @@ export default function Navbar() {
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-rose-600 px-3 py-2 font-medium">
               À propos
+            </Link>
+            <Link to="/auth" className="text-gray-700 hover:text-rose-600 px-3 py-2 font-medium">
+              <LogIn className="h-5 w-5 text-rose-600" /> 
             </Link>
           </div>
         </div>
