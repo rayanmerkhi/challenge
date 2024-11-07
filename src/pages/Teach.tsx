@@ -2,9 +2,8 @@ import React from 'react';
 import { useNavigate,useParams } from 'react-router-dom';
 import { Palette, Users, Sparkles } from 'lucide-react';
 import FranceMap from '../components/FranceMap';
-import { Link } from 'react-router-dom';
 
-export default function Home() {
+export default function Teach() {
   const navigate = useNavigate();
   var { id } = useParams();
   const features = [
@@ -33,23 +32,16 @@ export default function Home() {
           L'Artisanat Français à Portée de Main
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Découvrez et réservez des expériences uniques avec les artisans de votre région
+          Découvrez et apprenez avec les artisans de votre région de nouvelles vocations
         </p>
         {id !== undefined && <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Bonjour à vous {id}
         </p>}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <Link  to="/about" className="text-center shadow-sm bg-couleur-800 rounded-full p-2 m-8">
-            <p className="text-white">Je suis Artisan !</p>
-        </Link>
-        <Link to="/teach" className="bg-couleur-800 rounded-full text-center shadow-sm p-2 m-8">
-            <p className="text-white">Je veux devenir Apprenti !</p>
-        </Link>
-      </div>
+      
       <div className="bg-white rounded-3xl shadow-sm p-8 mb-16">
         <div className="max-w-4xl mx-auto">
-          <FranceMap onRegionClick={(regionId) => navigate(`/region/${regionId}`)} />
+          <FranceMap onRegionClick={(regionId) => navigate(`/region_apprenti/${regionId}`)} />
         </div>
       </div>
 

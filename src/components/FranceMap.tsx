@@ -221,12 +221,11 @@ export default function FranceMap({ onRegionClick }: FranceMapProps) {
           onMouseLeave={() => setHoveredRegion(null)}
           onClick={() => onRegionClick('rhone-alpes')}
         />
-
       </svg>
       
       {hoveredRegion && (
         <div 
-          className="absolute top-4 left-4 bg-white px-4 py-2 rounded-lg shadow-sm"
+          className="absolute top-1 -left-10 bg-white px-1 py-2 rounded-lg shadow-sm"
         >
           <h3 className="font-medium text-gray-900">
             {regions.find(r => r.id === hoveredRegion)?.name}

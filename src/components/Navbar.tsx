@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Palette,LogIn } from 'lucide-react';
+import { LogIn } from 'lucide-react';
 
 export default function Navbar() {
   return (
@@ -8,10 +8,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-2">
-            <Palette className="h-7 w-7 text-rose-600" />
+          <img />
             <span className="font-semibold text-2xl text-gray-900">Art'eliers</span>
           </Link>
-          <div className="flex space-x-6">
+          <div className="flex space-x-4">
             <Link to="/" className="text-gray-700 hover:text-rose-600 px-3 py-2 font-medium">
               Découvrir
             </Link>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { HeartCrack, Calendar, Clock, MapPin, Star, Euro, User } from 'lucide-react';
-import { regions, activities } from '../data/regions';
+import { regions, apprentissage } from '../data/regions';
 import BookingModal from '../components/BookingModal';
 import Payment from '../components/Payment';
 
-export default function Region() {
+export default function Region_apprenti() {
   const { id } = useParams();
   const [selectedActivity, setSelectedActivity] = useState<number | null>(null);
   const [payment, setPayement] = useState<number | null>(null);
@@ -21,7 +21,7 @@ export default function Region() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {activities
+        {apprentissage
           .filter(activity => activity.regionId === id)
           .map((activity) => (
             <div key={activity.id} className="bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
@@ -59,10 +59,6 @@ export default function Region() {
                       <User className="h-4 w-4 text-gray-400" />
                       <span>{activity.participants}</span>
                     </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="h-4 w-4 text-yellow-400" />
-                      <span>{activity.rating}</span>
-                    </div>
                   </div>
                 </div>
 
@@ -77,29 +73,22 @@ export default function Region() {
                 </div>
 
                 <button
-                  onClick={() => setSelectedActivity(activity.id)}
+                  onClick={() => setPayement(1)}
                   className="mt-6 w-full bg-rose-600 text-white py-2 px-4 rounded-lg hover:bg-rose-700 transition-colors flex items-center justify-center space-x-2"
                 >
                   <Calendar className="h-4 w-4" />
-                  <span>Réserver cette expérience</span>
+                  <span>Rejoindre cette formation</span>
                 </button>
               </div>
             </div>
           ))}
       </div>
-        {activities.filter(activity => activity.regionId === id).length < 1 &&
+        {apprentissage.filter(activity => activity.regionId === id).length < 1 &&
         <div className='text-center flex items-center space-x-1'>
           <HeartCrack className='h-6 w-6' />
-          <h2 className="text-2xl font-bold text-gray-900">Il n'y a pas encore de circuits ici. Revenez plus tard</h2>
+          <h2 className="text-2xl font-bold text-gray-900 ">Il n'y a pas encore de circuits ici. Revenez plus tard</h2>
         </div>
         }
-
-      {selectedActivity && (
-        <BookingModal
-          activityId={selectedActivity}
-          onClose={(price) => {setSelectedActivity(null);setPayement(price)}}
-        />
-      )}
       {payment && (
         <Payment
           price={payment}

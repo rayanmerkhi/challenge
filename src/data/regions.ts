@@ -133,6 +133,36 @@ export const regions = [
   }
 ];
 
+export const apprentissage = [
+{
+  id: 12,
+  regionId: 'provence-alpes-cote-dazur',
+  title: 'Formation céramiste',
+  description: 'Formez vous à l’art de la céramique pour lancer votre propre activité ou devenir artisan aux côtés des plus expérimentés.',
+  artisan: 'Jacky COVILLE',
+  location: 'Provence-Alpes-Côte d\'Azur',
+  duration: '800h',
+  participants: '1 personne',
+  price: '13 962€',
+  image: 'https://images.unsplash.com/photo-1590605105526-5c08f63f89aa?q=80&auto=format&fit=crop',
+  included: ['Certificat']
+},
+{
+  id: 13,
+  regionId: 'provence-alpes-cote-dazur',
+  title: 'Formation Ébéniste',
+  description: 'Formez vous auprès de Pierre Colas, ébéniste de renom de la région PACA.',
+  artisan: 'Pierre COLAS',
+  location: 'Provence-Alpes-Côte d\'Azur',
+  duration: '800h',
+  participants: '1 personne',
+  price: '14 058€',
+  image: 'https://plus.unsplash.com/photo-1681754370535-352ae19761fb?q=80&auto=format&fit=crop',
+  included: ['Certificat']
+},
+
+];
+
 export const activities = [
   {
     id: 1,
@@ -147,20 +177,6 @@ export const activities = [
     price: '280€',
     image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80',
     included: ['Matériaux', 'Déjeuners traditionnels', 'Votre création personnelle']
-  },
-  {
-    id: 2,
-    regionId: 'provence-alpes-cote-dazur',
-    title: 'Atelier de Parfumerie Artisanale',
-    description: 'Créez votre parfum unique avec une Maître Parfumeur de Grasse.',
-    artisan: 'Marie Dubois, Maître Parfumeur',
-    location: 'Grasse, Provence',
-    duration: '1 jour',
-    participants: '6-8 personnes',
-    rating: 4.8,
-    price: '195€',
-    image: 'https://images.unsplash.com/photo-1607006483224-56338f0d8777?auto=format&fit=crop&q=80',
-    included: ['Matières premières', 'Flacon personnalisé', 'Déjeuner provençal']
   },
   {
     id: 3,
@@ -203,8 +219,93 @@ export const activities = [
     price: '390€',
     image: 'https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?auto=format&fit=crop&q=80',
     included: ['Matériaux', 'Dégustation de vins', 'Repas gastronomiques']
-  }
+  },{
+    id: 6,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Terre de savoirs',
+    description: 'Circuit pour aller à  la rencontre des métiers artisanaux décoratifs : poterie, ébénisterie, broderie.',
+    artisan: 'Arnaud DENIZOU, Pierre COLAS, Adèle PERRIN',
+    location: 'Avignon, Provence-Alpes-Côte d\'Azur',
+    duration: '2 jours',
+    participants: '4-6 personnes',
+    rating: 4.7,
+    price: '378',
+    image: 'https://images.unsplash.com/photo-1589051079002-b140a970f568?q=80&auto=format&fit=crop',
+    included: [ 'Repas', 'Logement']
+  },
+ {
+    id: 7,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Roc et Diamant',
+    description: 'Circuit mettant l’accent sur les bijoux de cette région : bijouterie, sculpteur de pierre et souffleur de verre.',
+    artisan: 'Antoine PIERNI, Didier CAILLOUX, Jean-Louis GIRAUD',
+    location: 'Hyères, Provence-Alpes-Côte d\'Azur',
+    duration: '2 jours',
+    participants: '4-6 personnes',
+    rating: 4.5,
+    price: '413',
+    image: 'https://images.unsplash.com/photo-1506902039157-1a7e7374b077?q=80&auto=format&fit=crop',
+    included: ['Repas','Logement','Souvenir personnalisé']
+  },
+ {
+    id: 8,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Savoir-fer ',
+    description: 'Découverte des métiers du travail du métal :  orfèvrerie, forgeron et armurier.',
+    artisan: 'Leslie BARON, Philippe LEMARCHAND, Mikaël TROCHERIE',
+    location: 'Fréjus, Provence-Alpes-Côte d\'Azur',
+    duration: '4 jours',
+    participants: '2-3 personnes',
+    rating: 4.9,
+    price: '664€',
+    image: 'https://images.unsplash.com/photo-1497369573176-0ceb5353817d?q=80&auto=format&fit=crop',
+    included: ['Repas','Logement']
+  },
+ {
+    id: 9,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Le petit poucet',
+    description: 'Découvrez les personnes derrière la beauté de notre patrimoine à travers les métiers de : mosaïste, encadreur, relieur doreur',
+    artisan: 'Marie VOISIN, Olivier DECAT,François FERRIERE',
+    location: 'Vitrolles, Provence-Alpes-Côte d\'Azur',
+    duration: '2 jours',
+    participants: '3-5 personnes',
+    rating: 4.3,
+    price: '397€',
+    image: 'https://images.unsplash.com/photo-1515018403349-872e8206d50a?q=80&auto=format&fit=crop',
+    included: ['Repas','Logement','Vitrail personnalisé']
+  },
+ {
+    id: 10,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Même PACAp',
+    description: 'Partez pendant 1 semaine à la découverte de la région PACA et de ses maîtres artisans.',
+    artisan: 'Les meilleurs de la région',
+    location: 'Provence-Alpes-Côte d\'Azur',
+    duration: '6 jours',
+    participants: '2-4 personnes',
+    rating: 4.8,
+    price: '1616€',
+    image: 'https://images.unsplash.com/photo-1604948559069-3287d5c5a6e5?q=80&auto=format&fit=crop',
+    included: ['Repas','Logement','Souvenirs inoubliables']
+  },
+  {
+    id: 11,
+    regionId: 'provence-alpes-cote-dazur',
+    title: 'Séjour chez un armurier ',
+    description: 'Aidez un armurier durant une semaine en échange d’un toit et de repas conviviaux.',
+    artisan: 'Mikael TROCHERIE',
+    location: 'Provence-Alpes-Côte d\'Azur',
+    duration: '4-5 jours',
+    participants: '1 personne',
+    rating: 4.6,
+    price: '50€',
+    image: 'https://images.unsplash.com/photo_premium-1567353275733-1be871b8fe3f?q=80&auto=format&fit=crop',
+    included: ['Repas','Logement','Savoir-faire']
+  },
+
 ];
+
 
 export interface BookingDate {
   date: Date;
